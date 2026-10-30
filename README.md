@@ -30,9 +30,6 @@ crypto-password-generator
 
 # Specify password length
 crypto-password-generator --length 24
-
-# Generate a password and save it to a file
-crypto-password-generator --save password.txt
 ```
 
 **Safeguards:**
@@ -51,7 +48,7 @@ crypto-password-generator --save password.txt
 **Security Features:**
 
 - **CSPRNG:** Uses a cryptographically secure pseudo-random number generator (CSPRNG) from the `cryptography` package to ensure the randomness and unpredictability of generated passwords.
-- **Password Complexity:** Generates passwords with a range of characters (uppercase, lowercase, numbers, and symbols) to increase password complexity and resistance to brute-force attacks.
+- **Password Complexity:** The password is the derived key encoded as URL-safe base64 and cut to the requested length, so its characters are letters, digits, `-` and `_`. It does not add symbol classes beyond that alphabet. The exit code is 1 when generation fails (for example a length or iteration count below 1).
 - **No Storage or Sharing:** The generated password is not stored or shared anywhere, eliminating the risk of accidental disclosure or compromise.
 
 ### **6. License and Compliance Information**

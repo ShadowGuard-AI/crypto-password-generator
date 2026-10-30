@@ -1,6 +1,6 @@
-import os
 import logging
 import argparse
+import sys
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.backends import default_backend
@@ -52,6 +52,11 @@ def generate_password(length, salt=None, iterations=100000):
     """
     if length <= 0:
         raise ValueError("Password length must be greater than 0.")
+    # Check this here, with words that name the argument: left to the
+    # KDF, a zero count surfaces as its own wording and a negative one
+    # as a conversion error, neither of which tells the user what to fix.
+    if iterations < 1:
+        raise ValueError("Iterations must be at least 1.")
     
     # Generate a random salt if not provided
     if salt is None:
@@ -87,8 +92,13 @@ def main():
         print(f"Generated Password: {password}")
     except ValueError as ve:
         logging.error(f"ValueError: {ve}")
+        # A failed generation is a failed run. Logging the error and
+        # returning normally made scripts treat it as a success with
+        # no password.
+        sys.exit(1)
     except Exception as e:
         logging.error(f"An unexpected error occurred: {e}")
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()
