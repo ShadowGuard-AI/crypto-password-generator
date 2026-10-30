@@ -72,6 +72,9 @@ def generate_password(length, salt=None, iterations=100000):
         iterations=iterations,
         backend=default_backend()
     )
+    # The PBKDF2 input is a fresh random token, not a user password: the
+    # KDF is a stretching step over random material. That is why a custom
+    # salt changes the output but never makes it repeatable on its own.
     key = kdf.derive(secrets.token_bytes(16))
     
     # Encode the derived key to a URL-safe base64 string

@@ -18,18 +18,22 @@ The tool is designed to assist in the creation of strong and secure passwords, m
 
 ### **3. Installation Steps**
 
+There is no pip package for this tool. Clone the repository and install the one dependency:
+
 ```
-pip install crypto-password-generator
+git clone https://github.com/ShadowGuard-AI/crypto-password-generator.git
+cd crypto-password-generator
+pip install -r requirements.txt
 ```
 
 ### **4. Usage Examples**
 
 ```
 # Basic usage: Generate a 16-character password
-crypto-password-generator
+python3 main.py
 
 # Specify password length
-crypto-password-generator --length 24
+python3 main.py --length 24
 ```
 
 **Safeguards:**
