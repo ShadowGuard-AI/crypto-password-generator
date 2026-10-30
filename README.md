@@ -1,3 +1,5 @@
+![Banner](banner.png)
+
 ## **Technical Documentation for Security Analysis Tool**
 
 ### **1. Tool Overview**
