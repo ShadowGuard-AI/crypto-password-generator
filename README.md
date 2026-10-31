@@ -46,18 +46,18 @@ python3 main.py --length 24
 
 **Core Functions:**
 
-- `setup_argparse()`: Sets up command-line argument parsing for specifying password length and saving options.
+- `setup_argparse()`: Sets up command-line argument parsing for specifying password length (`-l` / `--length`), a custom salt (`-s` / `--salt`), and the PBKDF2 iteration count (`-i` / `--iterations`), plus `-v` / `--version`. There is no saving option: the generated password is printed to the console and is not written to a file.
 - `main()`: Implements the core functionality of password generation.
 
 **Security Features:**
 
-- **CSPRNG:** Uses a cryptographically secure pseudo-random number generator (CSPRNG) from the `cryptography` package to ensure the randomness and unpredictability of generated passwords.
+- **CSPRNG:** The random material comes from the Python standard library `secrets` module (`secrets.token_bytes`, at main.py lines 63 and 78), not from the `cryptography` package. The `cryptography` package provides the PBKDF2-HMAC-SHA256 key derivation that stretches that random material.
 - **Password Complexity:** The password is the derived key encoded as URL-safe base64 and cut to the requested length, so its characters are letters, digits, `-` and `_`. It does not add symbol classes beyond that alphabet. The exit code is 1 when generation fails (for example a length or iteration count below 1).
 - **No Storage or Sharing:** The generated password is not stored or shared anywhere, eliminating the risk of accidental disclosure or compromise.
 
 ### **6. License and Compliance Information**
 
-**License:** MIT License
+**License:** GNU General Public License v3.0 (GPL-3.0). See the LICENSE file in this repository.
 
 **Compliance:**
 
