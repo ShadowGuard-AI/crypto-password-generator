@@ -75,9 +75,18 @@ def generate_password(length, salt=None, iterations=100000):
     # The PBKDF2 input is a fresh random token, not a user password: the
     # KDF is a stretching step over random material. That is why a custom
     # salt changes the output but never makes it repeatable on its own.
+    # The token is 16 bytes whatever length was asked for, so the fresh
+    # input behind a long password is still 128 bits, plus the salt when
+    # that is random too. PBKDF2 stretches those bits over more bytes;
+    # it does not create entropy the inputs did not have.
     key = kdf.derive(secrets.token_bytes(16))
     
     # Encode the derived key to a URL-safe base64 string
+    # The KDF above was asked for exactly length bytes, and base64
+    # always expands bytes by about a third, so this slice is what sets
+    # the final character count. The padding characters sit at the very
+    # end of the full encoding, past the slice, so they never reach the
+    # printed password even for lengths 1 and 2.
     password = urlsafe_b64encode(key).decode('utf-8')[:length]
     return password
 
