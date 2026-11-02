@@ -1,6 +1,28 @@
-![Banner](banner.png)
+![Mist between canopy branches, a branch with leaf rosettes in a row holding still sky coloured water, one near cup with a droplet on the leaf tip above it and a frog waiting at the rim, no label tied anywhere](intro-banner.png)
+
+# crypto-password-generator
+
+Title block: the name above is set in Biryani in deep leaf green on a pale specimen sheet, ruled beneath in leaf green like a herbarium sheet heading, with a small bromeliad rosette drawn once at the left of the first heading only.
+
+![A single bromeliad rosette with a calm oval of sky colour held at its heart and a tiny canopy frog on the rim leaf, the name lettered below in the herbarium manner](logo.png)
+
+![A canopy limb with bromeliads ranked along it, dripping leaf tips at the left, one large tank at the right with a frog at the water edge and a droplet about to fall, the name only on a small herbarium label tied to the branch with twine](banner.png)
+
+![The canopy in three bands: mist drifting and thinning between distant branches, droplets forming at leaf tips and falling into the cups with one small ring each while a frog steps once at a cup rim, and a single beaded leaf tip crossing the lower corner now and then](scene.svg)
+
+![Major separator](sep-heavy.svg)
+
+
+
+> Collector note, entered under the sheet: rain first, then the cup, then the keeping, each step in sequence.
+
+![Minor separator](sep-light.svg)
 
 ## **Technical Documentation for Security Analysis Tool**
+
+> Collector note, in a plain hand: what is gathered here is held briefly, in the open, and stored nowhere.
+
+![Minor separator](sep-light.svg)
 
 ### **1. Tool Overview**
 
@@ -11,6 +33,10 @@
 **Overview:**
 
 `crypto-password-generator` is a command-line tool that generates random, secure passwords. It utilizes core cryptographic operations for password generation.
+
+> Collector note, at the foot of the sheet: the cup holds sixteen bytes of fresh rain whatever length of string is asked for.
+
+![Minor separator](sep-light.svg)
 
 ### **2. Analysis Purposes**
 
@@ -29,6 +55,7 @@ pip install -r requirements.txt
 ### **4. Usage Examples**
 
 ```
+
 # Basic usage: Generate a 16-character password
 python3 main.py
 
@@ -63,3 +90,27 @@ python3 main.py --length 24
 
 - Complies with best practices for password security and randomness.
 - Meets industry standards for generating secure passwords.
+
+![Major separator](sep-heavy.svg)
+
+## Keeper facts, stated from the code
+
+### The making, in working order
+
+Fresh random material is drawn from the Python standard library secrets module by the token bytes call, once for a random salt when no custom salt is supplied and once for the material fed to the key derivation. That material is stretched through PBKDF2 with HMAC and SHA256, as provided by the cryptography package, for a count of iterations that defaults to one hundred thousand. The derived bytes are encoded as URL safe base64, cut to the requested length and printed to the console under a fixed printed label, after which nothing is kept, written to a file or sent anywhere.
+
+### Every control, in parser order
+
+The length option, short l, long length, sets the character count and defaults to sixteen, with any value below one ending the run at exit 1. The salt option, short s, long salt, accepts a custom salt as text, which the code encodes before use, and defaults to no custom salt, in which case a fresh random salt of sixteen bytes is drawn instead. The iterations option, short i, long iterations, sets the PBKDF2 count, defaults to one hundred thousand and likewise ends the run at exit 1 when set below one. The version option, short v, long version, prints the tool name with its version number and stops. No saving option exists in the parser at all.
+
+### The character facts, by rule only
+
+The printed result can contain letters, digits and the two URL safe base64 marks, hyphen and underscore. It adds no symbol class beyond that alphabet. The padding marks of base64 never appear in the printed result, because they sit past the cut even at the shortest lengths. No example result is shown anywhere in this re-skin, in line with the secrets rule for this repo.
+
+### The limit stated in the code comments
+
+A long request does not carry more fresh randomness than a short one, because the token behind the derivation is sixteen bytes whatever length was asked for, so the derivation stretches those bits across more characters without creating entropy the inputs did not hold. A custom salt changes the outcome yet never makes it repeatable on its own, because the second token is drawn fresh on every run.
+
+### The licence
+
+The licence is the GNU General Public License v3.0, held in full in the LICENSE file.

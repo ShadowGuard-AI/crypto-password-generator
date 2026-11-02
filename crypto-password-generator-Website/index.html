@@ -1,165 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Crypto Password Generator: what it is, how it runs, where it stops</title>
-<meta name="description" content="The tool is designed to assist in the creation of strong and secure passwords, mitigating the risk of password compromise. It does not focus on compre">
-<style>
-:root {
-  --bg: #160e1e; --panel: #24162e; --ink: #f0eaf4;
-  --mut: #301d3e;
-  --acc: #e874b2; --acc2: #74c8e8;
-  --line: #24162e;
-}
-* { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--ink);
-  font-family: 'Trebuchet MS', sans-serif; line-height: 1.55; }
-code, pre, .mono { font-family: 'Courier New', monospace; }
-a { color: var(--acc2); }
-.hero { padding: 3rem 6vw 1rem; }
-.hero img.banner { width: 100%; height: auto; border: 1px solid var(--line);
-  border-radius: 10px; }
-.logo { width: 92px; height: 92px; border-radius: 18px;
-  border: 1px solid var(--line); }
-h1 { font-size: 2.4rem; margin: 0.4em 0 0.1em; }
-h2 { border-bottom: 2px solid var(--acc); padding-bottom: 0.2em;
-  margin-top: 2em; }
-.lede { font-size: 1.15rem; max-width: 62ch; }
-main { padding: 0 6vw 3rem; max-width: 1180px; margin: 0 auto; }
-.grid { display: grid; gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
-.card { background: var(--panel); border: 1px solid var(--line);
-  border-radius: 12px; padding: 1rem 1.2rem; }
-.card.pop { animation: rise 0.7s ease both; }
-@keyframes rise { from { opacity: 0; transform: translateY(14px); }
-  to { opacity: 1; transform: none; } }
-pre.code { background: #101014; color: #e8e6df; padding: 1rem 1.2rem;
-  border-radius: 12px; overflow-x: auto; font-size: 0.86rem;
-  border-left: 5px solid var(--acc); }
-table { border-collapse: collapse; width: 100%; }
-td, th { border-bottom: 1px solid var(--line); padding: 0.45rem 0.6rem;
-  text-align: left; }
-.shots { display: grid; gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-.shots img { width: 100%; height: auto; border: 1px solid var(--line);
-  border-radius: 10px; background: #f4f1e8; }
-footer { padding: 2rem 6vw; border-top: 1px solid var(--line);
-  color: var(--mut); }
-.rail { display: flex; gap: 1.2rem; align-items: flex-start; }
-.rail nav { position: sticky; top: 1rem; min-width: 180px; }
-@media (max-width: 760px) { .rail { flex-direction: column; }
-  .rail nav { position: static; } }
-@media (prefers-reduced-motion: reduce) {
-  .card.pop { animation: none; } * { scroll-behavior: auto; } }
-</style>
-</head>
-<body class="layout-ledger">
-<!-- This page exists for crypto-password-generator alone: the layout (ledger),
-     the colors, and the type were picked for this project, not
-     shared with the other project pages. The code block below is
-     copied from the file it names, line for line. If it looks
-     plain, that is because the project is plain, and I would
-     rather the page match the project than dress it up. The one
-     thing I will not do here is oversell: what this project does
-     not do is stated on the page, not hidden from it. -->
-<header class="hero">
-  <img class="logo" src="assets/logo.png" alt="Crypto Password Generator logo">
-  <img class="banner" src="assets/banner.png" alt="">
-  <h1>Crypto Password Generator</h1>
-  <p class="mono"><a href="https://github.com/ShadowGuard-AI/crypto-password-generator">github.com/ShadowGuard-AI/crypto-password-generator</a></p>
-</header>
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><title>crypto-password-generator: Cloud Forest Bromeliad Tanks</title>
+<style>@font-face{font-family:Disp;src:url("fonts/Biryani.ttf")}@font-face{font-family:Text;src:url("fonts/Cabin.ttf")}
+body{background:#dceef7;font-family:Text,serif;color:#1d1d1d;margin:0}main{max-width:920px;margin:0 auto;padding:28px}
+h1,h2{font-family:Disp,serif;color:#1e4a26}h3{font-family:Text,serif;color:#1e4a26}
+section{background:#f7e3ea;padding:18px 22px;margin:16px 0;border:1px solid #d99a26}
+img{max-width:100%}button{background:#f7e3ea;color:#1d1d1d;border:2px solid #d99a26;padding:10px 14px;margin:4px;font-family:Disp,serif}
+pre{white-space:pre-wrap;font-family:Text,serif}</style></head><body><main>
+<img src="intro-banner.png" alt="Mist between canopy branches, a branch with leaf rosettes in a row holding still sky coloured water, one near cup with a droplet on the leaf tip above it and a frog waiting at the rim, no label tied anywhere"><h1>crypto-password-generator: Cloud Forest Bromeliad Tanks</h1>
+<p>Theme: Cloud Forest Bromeliad Tanks. Headings in Biryani, running text in Cabin.</p>
+<img src="logo.png" alt="A single bromeliad rosette with a calm oval of sky colour held at its heart and a tiny canopy frog on the rim leaf, the name lettered below in the herbarium manner"><img src="banner.png" alt="A canopy limb with bromeliads ranked along it, dripping leaf tips at the left, one large tank at the right with a frog at the water edge and a droplet about to fall, the name only on a small herbarium label tied to the branch with twine">
+<img src="scene.svg" alt="The canopy in three bands: mist drifting and thinning between distant branches, droplets forming at leaf tips and falling into the cups with one small ring each while a frog steps once at a cup rim, and a single beaded leaf tip crossing the lower corner now and then"><div><button type="button">Make One Now</button></div><h3>How Many Characters</h3><h3>Custom Salt, Leave Blank for Random</h3><h3>Derivation Rounds</h3><h3>Generated password:</h3>
+<section><h2>The making, in working order</h2><p>Fresh random material is drawn from the Python standard library secrets module by the token bytes call, once for a random salt when no custom salt is supplied and once for the material fed to the key derivation. That material is stretched through PBKDF2 with HMAC and SHA256, as provided by the cryptography package, for a count of iterations that defaults to one hundred thousand. The derived bytes are encoded as URL safe base64, cut to the requested length and printed to the console under a fixed printed label, after which nothing is kept, written to a file or sent anywhere.</p></section>
+<section><h2>Every control, in parser order</h2><p>The length option, short l, long length, sets the character count and defaults to sixteen, with any value below one ending the run at exit 1. The salt option, short s, long salt, accepts a custom salt as text, which the code encodes before use, and defaults to no custom salt, in which case a fresh random salt of sixteen bytes is drawn instead. The iterations option, short i, long iterations, sets the PBKDF2 count, defaults to one hundred thousand and likewise ends the run at exit 1 when set below one. The version option, short v, long version, prints the tool name with its version number and stops. No saving option exists in the parser at all.</p></section>
+<section><h2>The character facts, by rule only</h2><p>The printed result can contain letters, digits and the two URL safe base64 marks, hyphen and underscore. It adds no symbol class beyond that alphabet. The padding marks of base64 never appear in the printed result, because they sit past the cut even at the shortest lengths. No example result is shown anywhere in this re-skin, in line with the secrets rule for this repo.</p></section>
+<section><h2>The limit stated in the code comments</h2><p>A long request does not carry more fresh randomness than a short one, because the token behind the derivation is sixteen bytes whatever length was asked for, so the derivation stretches those bits across more characters without creating entropy the inputs did not hold. A custom salt changes the outcome yet never makes it repeatable on its own, because the second token is drawn fresh on every run.</p></section>
+<section><h2>The licence</h2><p>The licence is the GNU General Public License v3.0, held in full in the LICENSE file.</p></section>
+<section><h2>Preserved live README record</h2><pre>## **Technical Documentation for Security Analysis Tool**
 
-<main>
-  <section class="rail">
-    <nav aria-label="on this page">
-      <p class="mono"><a href="#run">Run it</a><br>
-      <a href="#files">The files</a><br>
-      <a href="#sheets">The sheets</a><br>
-      <a href="https://github.com/ShadowGuard-AI/crypto-password-generator">The repo</a></p>
-    </nav>
-    <div>
-      <p class="lede">The tool is designed to assist in the creation of strong and secure passwords, mitigating the risk of password compromise. It does not focus on comprehensive security analysis but rather provides a specific utility for password generation in a secure manner.</p>
-      <div class="grid">
-        <div class="card pop"><h3>What it is</h3>
-          <p>Crypto Password Generator: 4 files, 160 counted
-          lines across Python 94, Markdown 62, Text 4. One job, done in the
-          open, in files you can read.</p></div>
-        <div class="card pop"><h3>The biggest piece</h3>
-          <p><code>main.py</code> carries the most
-          lines. If the project grows, that file is where the growth
-          lands first, for better or worse.</p></div>
-        <div class="card pop"><h3>The honest gap</h3>
-          <p>No test files yet. That is the honest gap, and the roadmap in the visuals folder says what the first one should cover.</p></div>
-      </div>
-      <section id="run">
-        <h2>Run it</h2>
-        <p>The repo README has the exact commands for this one. The
-        shape is the shape for most of my projects: clone it, read the
-        top file first so you know what will happen, then run it on
-        something you do not mind breaking.</p>
-        <p class="mono">$ git clone https://github.com/ShadowGuard-AI/crypto-password-generator.git<br>$ cd crypto-password-generator</p>
-      </section>
-      
-  <section aria-label="real code">
-    <h2>The code, as it sits in the repo</h2>
-    <p>From <code>main.py</code>, line 11 on. I did
-    not tidy it for the page. What you see is what the file has.</p>
-    <pre class="code"><code>logging.basicConfig(level=logging.INFO, format=&#x27;%(asctime)s - %(levelname)s - %(message)s&#x27;)
+### **1. Tool Overview**
 
-def setup_argparse():
-    &quot;&quot;&quot;
-    Set up command-line argument parsing.
-    
-    Returns:
-        argparse.ArgumentParser: Configured argument parser.
-    &quot;&quot;&quot;
-    parser = argparse.ArgumentParser(
-        description=&quot;crypto-password-generator: Generate random, secure passwords using cryptographic operations.&quot;
-    )
-    parser.add_argument(
-        &quot;-l&quot;, &quot;--length&quot;, type=int, default=16,
-        help=&quot;Length of the generated password (default: 16).&quot;
-    )
-    parser.add_argument(
-        &quot;-s&quot;, &quot;--salt&quot;, type=str, default=None,
-        help=&quot;Custom salt for the password generation (default: random salt).&quot;
-    )
-    parser.add_argument(
-        &quot;-i&quot;, &quot;--iterations&quot;, type=int, default=100000,</code></pre>
-  </section>
-      <section id="files">
-        <h2>The files that matter</h2>
-        <table><tr><th>File</th><th>Lines</th></tr>
-        <tr><td><code>main.py</code></td><td>94</td></tr>
-        <tr><td><code>README.md</code></td><td>62</td></tr>
-        <tr><td><code>requirements.txt</code></td><td>4</td></tr>
-        <tr><td><code>LICENSE</code></td><td>0</td></tr>
-        </table>
-        <p>Names doing the work: <span class="mono">setup_argparse, generate_password, main</span>.</p>
-      </section>
-      <section id="sheets">
-        <h2>Drawn by hand</h2>
-        <p>I sketch my projects on notebook paper so I have to
-        understand them well enough to draw them. The full set,
-        with the counts and how they were counted, is the
-        <a href="https://github.com/ShadowGuard-AI/crypto-password-generator/tree/main/crypto-password-generator-Visuals">crypto-password-generator-Visuals</a>
-        folder in the repo. Nothing is drawn over the binder holes.
-        That is a rule, not a style.</p>
-        <div class="shots">
-          <img src="assets/architecture.png" alt="Hand drawn architecture sheet for Crypto Password Generator">
-          <img src="assets/flowchart.png" alt="Hand drawn flowchart sheet for Crypto Password Generator">
-          <img src="assets/product-map.png" alt="Hand drawn product map sheet for Crypto Password Generator">
-        </div>
-      </section>
-    </div>
-  </section>
-</main>
-<footer>
-  <p>Crypto Password Generator is one of my projects. This page was written
-  from the repo itself on 2026-10-30: the counts are the
-  repo's counts, the code is the repo's code, and the gaps are the
-  repo's gaps.</p>
-</footer>
-</body>
-</html>
+**Tool Name:** `crypto-password-generator`
+
+**Category:** Cryptography
+
+**Overview:**
+
+`crypto-password-generator` is a command-line tool that generates random, secure passwords. It utilizes core cryptographic operations for password generation.
+
+### **2. Analysis Purposes**
+
+The tool is designed to assist in the creation of strong and secure passwords, mitigating the risk of password compromise. It does not focus on comprehensive security analysis but rather provides a specific utility for password generation in a secure manner.
+
+### **3. Installation Steps**
+
+There is no pip package for this tool. Clone the repository and install the one dependency:
+
+```
+git clone https://github.com/ShadowGuard-AI/crypto-password-generator.git
+cd crypto-password-generator
+pip install -r requirements.txt
+```
+
+### **4. Usage Examples**
+
+```
+# Basic usage: Generate a 16-character password
+python3 main.py
+
+# Specify password length
+python3 main.py --length 24
+```
+
+**Safeguards:**
+
+- Passwords are generated using a cryptographically secure pseudo-random number generator (CSPRNG) to ensure randomness and unpredictability.
+- Users can specify the desired password length to meet specific security requirements.
+- The tool does not store or share the generated password, minimizing the risk of compromise.
+
+### **5. Implementation Details**
+
+**Core Functions:**
+
+- `setup_argparse()`: Sets up command-line argument parsing for specifying password length (`-l` / `--length`), a custom salt (`-s` / `--salt`), and the PBKDF2 iteration count (`-i` / `--iterations`), plus `-v` / `--version`. There is no saving option: the generated password is printed to the console and is not written to a file.
+- `main()`: Implements the core functionality of password generation.
+
+**Security Features:**
+
+- **CSPRNG:** The random material comes from the Python standard library `secrets` module (`secrets.token_bytes`, at main.py lines 63 and 78), not from the `cryptography` package. The `cryptography` package provides the PBKDF2-HMAC-SHA256 key derivation that stretches that random material.
+- **Password Complexity:** The password is the derived key encoded as URL-safe base64 and cut to the requested length, so its characters are letters, digits, `-` and `_`. It does not add symbol classes beyond that alphabet. The exit code is 1 when generation fails (for example a length or iteration count below 1).
+- **No Storage or Sharing:** The generated password is not stored or shared anywhere, eliminating the risk of accidental disclosure or compromise.
+
+### **6. License and Compliance Information**
+
+**License:** GNU General Public License v3.0 (GPL-3.0). See the LICENSE file in this repository.
+
+**Compliance:**
+
+- Complies with best practices for password security and randomness.
+- Meets industry standards for generating secure passwords.</pre></section>
+</main></body></html>

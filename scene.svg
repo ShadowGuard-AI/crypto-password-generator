@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-label="canopy scene">
+<rect width="1200" height="300" fill="#dceef7"/>
+<g fill="#eef6ee"><rect x="0" y="18" width="1200" height="26"><animate attributeName="x" values="-60;60;-60" dur="30s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.5;0.95;0.5" dur="30s" repeatCount="indefinite"/></rect><rect x="0" y="58" width="1200" height="20"><animate attributeName="x" values="50;-50;50" dur="36s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0.45;0.9" dur="36s" repeatCount="indefinite"/></rect></g>
+<polygon points="0,150 1200,128 1200,168 0,196" fill="#6a4e32"/>
+<g stroke="#2e6b34" stroke-width="7"><line x1="240" y1="150" x2="206" y2="108"/><line x1="240" y1="150" x2="240" y2="102"/><line x1="240" y1="150" x2="276" y2="108"/><line x1="620" y1="142" x2="586" y2="100"/><line x1="620" y1="142" x2="620" y2="94"/><line x1="620" y1="142" x2="656" y2="100"/><line x1="980" y1="136" x2="946" y2="94"/><line x1="980" y1="136" x2="980" y2="88"/><line x1="980" y1="136" x2="1016" y2="94"/></g>
+<g fill="#7fb3d5"><ellipse cx="240" cy="152" rx="34" ry="10"/><ellipse cx="620" cy="144" rx="34" ry="10"/><ellipse cx="980" cy="138" rx="34" ry="10"/></g>
+<g><circle cx="620" cy="112" r="6" fill="#c4e0f2"><animate attributeName="cy" values="112;140" dur="7s" repeatCount="indefinite"/><animate attributeName="r" values="3;7" dur="7s" repeatCount="indefinite"/></circle>
+<ellipse cx="620" cy="146" rx="10" ry="3" fill="none" stroke="#7fb3d5" stroke-width="2"><animate attributeName="rx" values="4;30" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0" dur="7s" repeatCount="indefinite"/></ellipse></g>
+<g><animateTransform attributeName="transform" type="translate" values="0 0;14 0;14 0;0 0" keyTimes="0;0.4;0.7;1" dur="24s" repeatCount="indefinite"/><ellipse cx="1032" cy="128" rx="13" ry="8" fill="#56a04a"/><circle cx="1026" cy="120" r="4" fill="#56a04a"/><circle cx="1038" cy="120" r="4" fill="#56a04a"/></g>
+<g><animateTransform attributeName="transform" type="translate" values="-160 0;60 0;-160 0" dur="34s" repeatCount="indefinite"/><line x1="120" y1="292" x2="196" y2="262" stroke="#2e6b34" stroke-width="7"/><circle cx="150" cy="280" r="4" fill="#c4e0f2"/><circle cx="172" cy="270" r="4" fill="#c4e0f2"/></g>
+</svg>
